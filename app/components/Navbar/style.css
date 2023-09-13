@@ -1,0 +1,15 @@
+.navbar--container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid rgba(78, 84, 113, 0.2);
+    margin: 3px 140px; /* To be removed later after setting the container margins */
+    
+}
+
+.navbar--languagecurrency {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

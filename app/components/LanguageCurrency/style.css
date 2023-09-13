@@ -1,0 +1,28 @@
+.navbar--currency--select {
+    margin-left: 10px;
+    padding: 0 10px !important; 
+}
+
+#demo-simple-select-standard  {
+    width: 80px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    font-family: Roboto, sans-serif;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.currency--symbol {
+    margin-left: 10px;
+}
+
+.language--options {
+    padding-right: 10px;
+}
+
+.options--menuitem {
+    font-weight: bold !important;
+
+}
