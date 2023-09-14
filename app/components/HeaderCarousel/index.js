@@ -41,11 +41,7 @@ const HeaderCarousel = () => (
         swipeable
         draggable
         centerMode={true}
-        focusOnSelect
-        afterChange={(previousSlide, { currentSlide, onMove }) => {
-            console.log({previousSlide, currentSlide, onMove})
-        }}
-        // arrows={false}
+        arrows={false}
         containerClass="header--carousel-container"
         dotListClass="header--custom-dot-list-style"
         itemClass="header--carousel--item"
