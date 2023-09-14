@@ -1,11 +1,11 @@
 "use client";
-import { Box } from "@mui/material";
 import Image from "next/image";
+import Link from "next/link";
+import { Box } from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 import "./style.css";
-import Link from "next/link";
 
 const responsive = {
   desktop: {
@@ -40,7 +40,7 @@ const images = [
   "/TopCategories/top categories - 4.png",
 ];
 
-const topCategoriesCarousel = () => {
+const CategoriesCarousel = () => {
   return (
     <Box>
       <Box className="topcategories--carousel--header">
@@ -61,9 +61,9 @@ const topCategoriesCarousel = () => {
         removeArrowOnDeviceType={["tablet", "mobile"]}
       >
         {images.map((e) => (
-          <Box>
+          <Box key={e + Math.random()}>
             <Link href={"#"} style={{ textDecoration: "none" }}>
-              <Image src={e} width={150} height={150} />
+              <Image src={e} width={150} height={150} alt="Top Categories Products" />
               <h3 className="carousel--item--heading">Electronics</h3>
             </Link>
           </Box>
@@ -73,4 +73,4 @@ const topCategoriesCarousel = () => {
   );
 };
 
-export default topCategoriesCarousel;
+export default CategoriesCarousel;

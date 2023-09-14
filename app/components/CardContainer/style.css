@@ -1,0 +1,27 @@
+.Cards--container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.cardscontainer--secondgroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 50px;
+}
+
+.cards--image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .Cards--container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

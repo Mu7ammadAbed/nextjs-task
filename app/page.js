@@ -1,11 +1,15 @@
 import Navbar from './components/Navbar'
-import Carousel from './components/Carousel'
+import CategoriesCarousel from './components/CategoriesCarousel'
+import CardContainer from './components/CardContainer'
+import HeaderCarousel from './components/HeaderCarousel'
 
 export default function Home() {
   return (
     <div className='home--container'>
       <Navbar />
-      <Carousel />
+      <HeaderCarousel />
+      <CategoriesCarousel />
+      <CardContainer />
     </div>
   )
 }

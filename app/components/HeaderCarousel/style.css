@@ -1,0 +1,17 @@
+.header--carousel-container {
+    height: 100%;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.header--carousel--item {
+    padding-left: 9%;
+    padding-right: 9%;
+}
+
+.header--custom-dot-list-style button {
+    border: 1px solid #554af0;
+    width: 16.5px;
+    height: 16.5px;
+    margin: 0 14px 40px 0;
+  }
