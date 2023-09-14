@@ -1,28 +1,27 @@
 .Navbarlinks--container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .Navbarlinks--stack {
-    margin: 25px 67px;
+  margin: 25px 67px;
 }
 
 .Navbarlinks--stack .navbarlinks--item {
-    border: none !important;
-    font-size: 18px;
-    color: #707070;
-    text-decoration: none;
-    margin: 0 20px;
+  border: none !important;
+  font-size: 18px;
+  color: #707070;
+  text-decoration: none;
+  margin: 0 20px;
 }
 
 .Navbarlinks--icons .navbarlinks--item {
-    margin: 0 16px;
+  margin: 0 16px;
 }
 .Navbarlinks--stack .navbarlinks--firstitem {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .Navbarlinks--stack .navbarlinks--lastitem {
-    margin-right: 0;
+  margin-right: 0;
 }
-

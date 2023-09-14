@@ -1,12 +1,14 @@
 .navbar--logo {
-    width: 186px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: 186px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #121212;
 }
 
 .navbar--logo .logo--heading {
-    font-size: 32px;
-    font-weight: 500;
-    text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 500;
+  text-transform: uppercase;
 }
