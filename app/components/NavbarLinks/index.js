@@ -1,13 +1,16 @@
 import Link from "next/link";
 import Image from "next/image.js";
 import { Box, Stack, Paper, styled, Menu } from "@mui/material";
+import { useTranslation } from "@/app/i18n";
 
 import "./style.css";
 
 import navbarLinks from "@/app/appData/navbarLinks";
 import navbarIcons from "@/app/appData/navbarIcons";
 
-const NavbarLinks = () => {
+const NavbarLinks = async ({lng}) => {
+  const { t } = await useTranslation(lng)
+
   return (
     <Box className="Navbarlinks--container">
       <Stack
@@ -18,7 +21,7 @@ const NavbarLinks = () => {
       >
         {navbarLinks.map((e) => (
           <Link href={e.href} className={e.className} key={e.value}>
-            {e.value}
+            {t(e.value)}
           </Link>
         ))}
       </Stack>

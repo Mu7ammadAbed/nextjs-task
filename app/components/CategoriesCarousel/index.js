@@ -1,4 +1,5 @@
 "use client";
+import { useParams } from 'next/navigation'
 import Image from "next/image";
 import Link from "next/link";
 import { Box } from "@mui/material";
@@ -41,12 +42,15 @@ const images = [
 ];
 
 const CategoriesCarousel = () => {
+  const {lng} = useParams()
+
   return (
     <Box>
       <Box className="topcategories--carousel--header">
-        <h4 className="carousel--header--heading">Categories</h4>
+        <h4 className="carousel--header--heading">{lng === 'en' ? 'Categories' : 'الفئات'}</h4>
         <Link href={"#"} className="carousel--header--link">
-          See all &#x2192;
+        {lng === 'en' ? `See all ` : 'عرض الكل '}
+        &#x2192;
         </Link>
       </Box>
       <Carousel
@@ -64,7 +68,7 @@ const CategoriesCarousel = () => {
           <Box key={e + Math.random()}>
             <Link href={"#"} style={{ textDecoration: "none" }}>
               <Image src={e} width={150} height={150} alt="Top Categories Products" />
-              <h3 className="carousel--item--heading">Electronics</h3>
+              <h3 className="carousel--item--heading">{lng === 'en' ? `Electronics` : 'الإلكترونيات'}</h3>
             </Link>
           </Box>
         ))}

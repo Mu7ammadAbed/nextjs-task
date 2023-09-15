@@ -1,13 +1,5 @@
-import Header from './components/Header'
-import CategoriesCarousel from './components/CategoriesCarousel'
-import CardContainer from './components/CardContainer'
+import { redirect } from 'next/navigation';
 
-export default function Home() {
-  return (
-    <div className='home--container'>
-      <Header />
-      <CategoriesCarousel />
-      <CardContainer />
-    </div>
-  )
+export default async function Home() {
+  redirect('/en');
 }

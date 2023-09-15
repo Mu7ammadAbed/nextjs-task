@@ -1,11 +1,13 @@
 import Navbar from "../Navbar";
 import HeaderCarousel from "../HeaderCarousel";
 
-const Header = () => (
+const Header = ({lng}) => {
+  return (
     <>
-    <Navbar />
-    <HeaderCarousel />
+      <Navbar lng={lng} />
+      <HeaderCarousel />
     </>
-)
+  );
+};
 
-export default Header
+export default Header;

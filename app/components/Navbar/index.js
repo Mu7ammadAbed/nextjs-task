@@ -6,7 +6,7 @@ import "./style.css";
 import { Box } from "@mui/material";
 import NavbarLinks from "../NavbarLinks";
 
-const Navbar = () => {
+const Navbar = ({lng}) => {
   return (
     <Box>
       <Box className="navbar--container">
@@ -17,7 +17,7 @@ const Navbar = () => {
           <LanguageCurrency options={"currency"} />
         </Box>
       </Box>
-      <NavbarLinks />
+      <NavbarLinks lng={lng} />
     </Box>
   );
 };

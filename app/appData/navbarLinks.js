@@ -15,7 +15,7 @@ const navbarLinks = [{
     href: "#",
     className: "navbarlinks--item"
   }, {
-    value: "Contact Us",
+    value: "Contact-Us",
     href: "#",
     className: "navbarlinks--item"
   }]

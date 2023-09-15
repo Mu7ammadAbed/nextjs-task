@@ -1,15 +1,23 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useParams } from 'next/navigation'
 import { Box, MenuItem, FormControl, Select } from "@mui/material";
 import Image from "next/image.js";
 import "./style.css";
+import Link from "next/link";
 
-const LanguageCurrency = ({ options }) => {
-  const [option, setOption] = useState(1);
+const LanguageCurrency = ({options}) => {
+  const [currency, setCurrency] = useState(1);
+  const [language, setlanguage] = useState(1);
+  const params = useParams()
 
-  const handleChange = (event) => {
-    setOption(event.target.value);
+  const handleChange = (e) => {
+    options === 'currency' ? setCurrency(e.target.value) : setlanguage(e.target.value)
   };
+
+  useEffect(() => {
+    params.lng === 'ar' ? setlanguage(2) : setlanguage(1);
+  }, [language])
 
   return (
     <Box>
@@ -21,7 +29,7 @@ const LanguageCurrency = ({ options }) => {
         <Select
           labelId="demo-simple-select-standard-label"
           id="demo-simple-select-standard"
-          value={option}
+          value={options === 'currency' ? currency : language}
           onChange={handleChange}
           label="Language-Currency"
           disableUnderline
@@ -46,6 +54,7 @@ const LanguageCurrency = ({ options }) => {
           )}
           {options === "language" && (
             <MenuItem className="options--menuitem" value={1}>
+              <Link href={'/en'} style={{textDecoration: 'none'}}>
               <Image
                 className="language--options"
                 src={"/English.svg"}
@@ -54,18 +63,22 @@ const LanguageCurrency = ({ options }) => {
                 alt="UK Flag"
               />{" "}
               English
+              </Link>
             </MenuItem>
           )}
           {options === "language" && (
             <MenuItem className="options--menuitem" value={2}>
+              <Link href={'/ar'} style={{textDecoration: 'none'}}>
+
               <Image
                 className="language--options"
                 src={"/Arabic.svg"}
                 width={32}
                 height={21}
                 alt="KSA Flag"
-              />{" "}
+                />{" "}
               Arabic
+                </Link>
             </MenuItem>
           )}
         </Select>

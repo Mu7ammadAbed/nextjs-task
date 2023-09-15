@@ -1,4 +1,7 @@
 {
-    "title": "Hi there!",
-    "to-second-page": "To second page"
+    "Home": "Home",
+    "Products": "Products",
+    "Categories": "Categories",
+    "Offers": "Offers",
+    "Contact-Us": "Contact Us"
   }
