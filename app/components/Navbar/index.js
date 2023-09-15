@@ -11,7 +11,7 @@ const Navbar = ({lng}) => {
     <Box>
       <Box className="navbar--container">
         <Logo />
-        <SearchBar />
+        <SearchBar lng={lng} />
         <Box className="navbar--languagecurrency">
           <LanguageCurrency options={"language"} />
           <LanguageCurrency options={"currency"} />
