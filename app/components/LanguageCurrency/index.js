@@ -54,7 +54,7 @@ const LanguageCurrency = ({options}) => {
           )}
           {options === "language" && (
             <MenuItem className="options--menuitem" value={1}>
-              <Link href={'/en'} style={{textDecoration: 'none'}}>
+              <Link href={'/en'} style={{textDecoration: 'none', color: '#121212'}}>
               <Image
                 className="language--options"
                 src={"/English.svg"}
@@ -68,7 +68,7 @@ const LanguageCurrency = ({options}) => {
           )}
           {options === "language" && (
             <MenuItem className="options--menuitem" value={2}>
-              <Link href={'/ar'} style={{textDecoration: 'none'}}>
+              <Link href={'/ar'} style={{textDecoration: 'none', color: '#121212'}}>
 
               <Image
                 className="language--options"
